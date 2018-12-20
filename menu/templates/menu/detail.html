@@ -1,0 +1,34 @@
+{% extends 'menu/base.html' %}
+
+{% block title %}Cafeteria | Menu{% endblock %}
+{% block body %}
+
+    <h2> Snacks </h2>
+<div class="row">
+<br>
+<br>
+
+
+
+        {% for category in all_menu %}
+           <div class="col-sm-4 col-lg-2">
+                <div class="thumbnail">
+
+                   <!--  Album Logo-->
+                    <a href="#">
+                        <img src="{{ Menu.image.url }}" class="img-responsive">
+                    </a>
+
+                    <div class="caption">
+                        <h2>{{ Menus.category }}</h2>
+
+                         <!--  details-->
+                        <a href="#" class="btn btn-primary btn-sm">View Details</a>
+
+                    </div>
+
+                </div>
+           </div>
+       {% endfor %}
+</div>
+{% endblock %}
